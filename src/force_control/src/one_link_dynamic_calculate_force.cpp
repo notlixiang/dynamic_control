@@ -15,7 +15,7 @@ using namespace std;
 
 double position, velocity_pre, velocity_now, acc_no_filter, acc_filter, force_real;
 
-double position_raw_kalman,speed_raw_kalman;
+double position_raw_kalman, speed_raw_kalman;
 std::chrono::high_resolution_clock::time_point t_pre, t_new;
 
 void Callback(const sensor_msgs::JointState::ConstPtr &msg) {
@@ -37,8 +37,8 @@ void Callback(const sensor_msgs::JointState::ConstPtr &msg) {
         force_real = msg->effort[0];
     }
 
-    position_raw_kalman=position;
-    speed_raw_kalman=velocity_now;
+    position_raw_kalman = position;
+    speed_raw_kalman = velocity_now;
 
     velocity_pre = velocity_now;
     t_pre = t_new;
@@ -70,8 +70,8 @@ void pub_acc_thread() {
     C << 1, 0, 0, 0, 1, 0;
 
     // Reasonable covariance matrices
-    Q << .05, 0, .0, 0, .05, .0, .0, .0, .05;
-    R << 0.001,0,0.01,0;
+    Q << .00005, 0, .0, 0, .0005, .0, .0, .0, 1.0;
+    R << 0.00001, 0, 0, 0.01;
     P << .1, .1, .1, .1, 10, 10, .1, 10, 100;
 
     std::cout << "A: \n" << A << std::endl;
@@ -86,7 +86,7 @@ void pub_acc_thread() {
     sleep(1.0);
     Eigen::VectorXd x0(n_filter);
     x0 << position_raw_kalman, speed_raw_kalman, 0;
-    kf.init(0,x0);
+    kf.init(0, x0);
 
     while (ros::ok()) {
         std_msgs::Float64 msg_filter, msg_no_filter;
@@ -108,10 +108,10 @@ void pub_acc_thread() {
         force_error_pub.publish(msg_force_error);
 
         Eigen::VectorXd y(m_filter);
-        y <<position_raw_kalman, speed_raw_kalman;
+        y << position_raw_kalman, speed_raw_kalman;
         kf.update(y);
         std_msgs::Float64 msg_compute_acc_kalman;
-        msg_compute_acc_kalman.data=kf.state()[2];
+        msg_compute_acc_kalman.data = kf.state()[2]*1.000;
         acc_kalman_filter_pub.publish(msg_compute_acc_kalman);
 
 

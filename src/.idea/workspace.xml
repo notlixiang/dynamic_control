@@ -107,9 +107,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8b99cec-1c53-4a4c-96e0-d70ba5c20012" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/force_control/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/force_control/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/force_control/src/one_link_dynamic_calculate_force.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/force_control/src/one_link_dynamic_calculate_force.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -125,7 +122,7 @@
     <session id="1386905992">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.opened" value="2" />
@@ -146,14 +143,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="150" />
+          <entry key="cpp" value="229" />
           <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="5" />
-          <entry key="ObjectiveC" value="150" />
+          <entry key="ObjectiveC" value="229" />
         </counts>
       </usages-collector>
     </session>
@@ -163,8 +160,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/force_control/src/one_link_dynamic_calculate_force.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="74" column="45" lean-forward="true" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
+            <state relative-caret-position="337">
+              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -230,8 +227,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="79" />
-    <option name="y" value="183" />
+    <option name="x" value="57" />
+    <option name="y" value="162" />
     <option name="width" value="1863" />
     <option name="height" value="1056" />
   </component>
@@ -897,21 +894,21 @@
       <option name="presentableId" value="Default" />
       <updated>1543985738880</updated>
       <workItem from="1543985740943" duration="35000" />
-      <workItem from="1543985788624" duration="2036000" />
+      <workItem from="1543985788624" duration="4341000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2071000" />
+    <option name="totallyTimeSpent" value="4376000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="-4" width="1863" height="1084" extended-state="6" />
+    <frame x="57" y="162" width="1863" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2526142" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.3294979" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.33943966" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -969,8 +966,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/force_control/src/one_link_dynamic_calculate_force.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="74" column="45" lean-forward="true" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
+        <state relative-caret-position="337">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
