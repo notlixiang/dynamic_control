@@ -11,7 +11,8 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
 )
-
+set(EIGEN_INC_DIR /usr/include/eigen3/)
+include_directories(${EIGEN_INC_DIR})
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
@@ -138,7 +139,7 @@ target_link_libraries(one_link_force_control_node  ${catkin_LIBRARIES})
 add_executable(one_link_force_sin_command_node src/one_link_force_sin_command.cpp)
 target_link_libraries(one_link_force_sin_command_node  ${catkin_LIBRARIES})
 
-add_executable(one_link_dynamic_calculate_force_node src/one_link_dynamic_calculate_force.cpp src/filter/LowPassFilter.cpp)
+add_executable(one_link_dynamic_calculate_force_node src/one_link_dynamic_calculate_force.cpp src/filter/LowPassFilter.cpp src/filter/kalman.cpp)
 target_link_libraries(one_link_dynamic_calculate_force_node  ${catkin_LIBRARIES})
 
 #############
