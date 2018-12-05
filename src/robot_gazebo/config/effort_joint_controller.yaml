@@ -1,0 +1,6 @@
+one_link:
+  # effort Controllers ---------------------------------------
+  joint1_effort_controller:
+    type: effort_controllers/JointEffortController
+    joint: base_to_link1
+    pid: {p: 200.0, i: 0.0, d: 10.0}

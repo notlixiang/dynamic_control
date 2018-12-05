@@ -1,0 +1,11 @@
+<launch>
+
+  <include file="$(find robot_gazebo)/launch/robot_gazebo_world.launch" />
+
+  <include file="$(find robot_gazebo)/launch/joint_states_controller.launch" />
+
+  <include file="$(find robot_gazebo)/launch/effort_controller.launch" /> 
+
+  <!--<include file="$(find robot_gazebo)/launch/velocity_controller.launch" /> -->
+
+</launch>

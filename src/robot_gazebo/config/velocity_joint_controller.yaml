@@ -1,0 +1,6 @@
+one_link:
+  # velocity Controllers ---------------------------------------
+  joint1_velocity_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: base_to_link1
+    pid: {p: 200.0, i: 0.0, d: 10.0}

@@ -1,0 +1,10 @@
+<launch>
+<!-- We resume the logic in empty_world.launch -->
+<include file="$(find gazebo_ros)/launch/empty_world.launch"/>
+
+<param name="robot_description" command="cat $(find robot_description)/urdf/one_link.urdf"/>
+
+<!-- Spawn a robot into Gazebo -->
+<node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find robot_description)/urdf/one_link.urdf -urdf -z 1.3 -model one_link" />
+
+</launch>
